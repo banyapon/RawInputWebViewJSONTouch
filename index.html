@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: "Noto Sans Thai", sans-serif;
+        }
+
+        #myDiv {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>TouchPad Canvas</h1>
+    <div id="myDiv"></div>
+    <canvas id="touchpadCanvas" style="background-color:#eee;" width="1000" height="600"></canvas>
+
+    <script>
+        const myDiv = document.getElementById("myDiv");
+        const canvas = document.getElementById("touchpadCanvas");
+        const ctx = canvas.getContext("2d");
+
+        window.chrome.webview.addEventListener('message', event => {
+            const message = JSON.stringify(event.data); // แปลง Object เป็น JSON string
+
+            // แสดงข้อความใน myDiv
+            myDiv.textContent = message;
+
+            // แปลง message เป็น Array ของ Object
+            const contacts = JSON.parse(message).data; // แปลง JSON string กลับเป็น Object แล้วเข้าถึง data
+            console.log("message", message);
+            // ลบข้อมูลเดิมบน Canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // วาดวงกลมสำหรับแต่ละจุดสัมผัส
+            contacts.forEach(contact => {
+                ctx.beginPath();
+                ctx.arc(contact.X, contact.Y, 15, 0, 2 * Math.PI); // ปรับขนาดวงกลม
+                ctx.fillStyle = "green"; // เปลี่ยนสี
+                ctx.fill();
+            });
+        });
+    </script>
+</body>
+</html>
