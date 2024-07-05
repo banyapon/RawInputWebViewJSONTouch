@@ -20,9 +20,9 @@ The original RawInput.Touchpad source code by [emoacht](https://github.com/emoac
 ![Image of This Application](https://github.com/banyapon/RawInputWebViewJSONTouch/blob/main/images/pic3.png?raw=true)
 
 ## Project Structure
-* **RMainWindow.xaml:** Defines the WPF window layout, including the WebView2 control.
-* **RMainWindow.xaml.cs:** Contains the C# code for handling touchpad input, communicating with the web page, and visualizing the data.
-* **Rindex.html:** The embedded HTML page with the JavaScript code to display the touch points on a canvas.
+* **MainWindow.xaml:** Defines the WPF window layout, including the WebView2 control.
+* **MainWindow.xaml.cs:** Contains the C# code for handling touchpad input, communicating with the web page, and visualizing the data.
+* **index.html:** The embedded HTML page with the JavaScript code to display the touch points on a canvas.
 * **TouchpadHelper.cs:** (Assumed) Helper class for touchpad interaction (not included in this example).
 
 ## How it Works
@@ -50,20 +50,20 @@ Prerequisites:
 ```html
 git clone https://github.com/your-username/Touchpad-Controlled-3D-Navigation.git
 ```
-**Open and Build:** Open the solution in Visual Studio and build the project.
-**Run:** Run the application. You should see a window with an embedded web page. Interacting with your touchpad will display touch points as circles on the canvas.
+* **Open and Build:** Open the solution in Visual Studio and build the project.
+* **Run:** Run the application. You should see a window with an embedded web page. Interacting with your touchpad will display touch points as circles on the canvas.
 
 ## Potential Improvements
-**3D Navigation Integration:** Implement actual 3D navigation controls based on the touchpad input.
-**Gesture Recognition:** Incorporate machine learning or gesture recognition algorithms to interpret more complex touchpad interactions.
-**Customization:** Allow for customization of the visualization (e.g., color, size of the circles) and the types of touchpad events to capture.
+* **3D Navigation Integration:** Implement actual 3D navigation controls based on the touchpad input.
+* **Gesture Recognition:** Incorporate machine learning or gesture recognition algorithms to interpret more complex touchpad interactions.
+* **Customization:** Allow for customization of the visualization (e.g., color, size of the circles) and the types of touchpad events to capture.
 
 ## Research Potential
 This project serves as a foundation for exploring novel touchpad-based 3D navigation techniques. Future research could focus on:
 
-**Intuitive Gesture Design:** Designing user-friendly gestures for 3D manipulation.
-**Machine Learning Models:** Training models to recognize complex gestures and map them to 3D actions.
-**User Studies:** Evaluating the effectiveness and usability of the new gestures.
+* **Intuitive Gesture Design:** Designing user-friendly gestures for 3D manipulation.
+* **Machine Learning Models:** Training models to recognize complex gestures and map them to 3D actions.
+* **User Studies:** Evaluating the effectiveness and usability of the new gestures.
 
 ## Contributing
 
