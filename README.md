@@ -48,7 +48,7 @@ Prerequisites:
 **Clone the Repository:**
 
 ```html
-git clone https://github.com/your-username/Touchpad-Controlled-3D-Navigation.git
+git clone https://github.com/banyapon/RawInputWebViewJSONTouch.git
 ```
 * **Open and Build:** Open the solution in Visual Studio and build the project.
 * **Run:** Run the application. You should see a window with an embedded web page. Interacting with your touchpad will display touch points as circles on the canvas.
